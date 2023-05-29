@@ -1,0 +1,10 @@
+streamlit~=1.22.0
+streamlit_chat
+langchain~=0.0.180
+sentence_transformers
+openai
+pinecone-client
+unstructured
+tabulate
+pdf2image
+python-dotenv

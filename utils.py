@@ -27,23 +27,30 @@ def img_to_bytes(img_path):
 
 # Finding the right chunk to match the required query in the index
 def find_match(_input):
-    input_em = model.encode(_input).tolist()
-    result = index.query(input_em, top_k=2, includeMetadata=True)
-    return result['matches'][0]['metadata']['text'] + "\n" + result['matches'][1]['metadata']['text']
+    try:
+        input_em = model.encode(_input).tolist()
+        result = index.query(input_em, top_k=2, includeMetadata=True)
+        return result['matches'][0]['metadata']['text'] + "\n" + result['matches'][1]['metadata']['text']
+    except:
+        return "Pinecone index issue found"
 
 
 # Redefining the query asked by the user based on the chat history and question asked
 def query_refiner(conversation, query):
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=f"Given the following user query and conversation log, formulate a question that would be the most relevant to provide the user with an answer from a knowledge base.\n\nCONVERSATION LOG: \n{conversation}\n\nQuery: {query}\n\nRefined Query:",
-        temperature=0,
-        max_tokens=1024,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0
-    )
-    return response['choices'][0]['text']
+    try:
+        response = openai.Completion.create(
+            model="text-davinci-003",
+            prompt=f"Given the following user query and conversation log, formulate a question that would be the most relevant to provide the user with an answer from a knowledge base.\n\nCONVERSATION LOG: \n{conversation}\n\nQuery: {query}\n\nRefined Query:",
+            temperature=0,
+            max_tokens=1024,
+            top_p=1,
+            frequency_penalty=0,
+            presence_penalty=0
+        )
+
+        return response['choices'][0]['text']
+    except:
+        return "OpenAI issue found - probable cause is key index or rate limit error"
 
 
 # Constructing the history for the chat

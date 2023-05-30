@@ -1,9 +1,11 @@
 import streamlit as st
+from utils import *
 
 st.set_page_config(
     page_title="About this app",
     layout='wide'
 )
+st.markdown('''<img src='data:image/png;base64,{}' width=100% height=170>'''.format(img_to_bytes("assets/consulting_banner.png")), unsafe_allow_html=True)
 
 st.title("About Finnbot")
 st.write("""
@@ -28,7 +30,5 @@ This chatbot will definitely not know anything about anything that happened in t
 **What documents has the chatbot ingested?**\n
 The OpenAI LLM as a whole has been trained on a huge amount of data on the Internet up to September 2021. This chatbot has additionally ingested our to public annual reports for FY 2021 and FY2022,  which you can find [here](https://investors.thoughtworks.com/financial-information/annual-reports)
 
-**How this app works**\n
-![image](assets/architecture.png)
-""")
-
+**How this app works**\n""")
+st.markdown('''<img src='data:image/png;base64,{}' width=700 height=400>'''.format(img_to_bytes("assets/architecture.png")), unsafe_allow_html=True)

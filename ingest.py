@@ -33,8 +33,11 @@ documents = load_docs(directory)
 print(f"Number of documents ingested: {len(documents)}")
 chunks = split_docs(documents)
 print(f"Number of chunks created: {len(chunks)}")
+print(type(chunks[0]))
+print(chunks[0])
 
-pinecone.init(os.getenv('PINECONE_API_KEY'), environment=os.getenv('PINECONE_ENVIRONMENT'))
-index_name = os.getenv('PINECONE_INDEX_NAME')
 
-index = Pinecone.from_documents(chunks, embeddings, index_name=index_name)
+#pinecone.init(os.getenv('PINECONE_API_KEY'), environment=os.getenv('PINECONE_ENVIRONMENT'))
+#index_name = os.getenv('PINECONE_INDEX_NAME')
+
+#index = Pinecone.from_documents(chunks, embeddings, index_name=index_name)

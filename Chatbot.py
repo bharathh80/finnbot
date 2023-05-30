@@ -24,7 +24,9 @@ st.title('Welcome to Finn! Your personal Finance Bot!')
 st.write('''Hi! I am Finn. I am an AI-powered chatbot.\nI have available to me the Thoughtworks annual reports of the financial years of 2021 and 2022. You can ask me questions in English and other languages about the financial information that we reported during these financial years. 
 I'm here as a small-scale experiment for us to try out.\n
 Obviously nothing that I say could be taken as financial advice, and like all chatbots, I will generally tell you if I don't have the answer …  but I can sometimes produce information that's just plain wrong. 
-\nBut hey, pull up a stool and ask me some questions!\n\n''')
+\nBut hey, pull up a stool and ask me some questions!\n\n
+I know I'm buggy, but we still welcome your feedback. Please mail us @ consulting-academy@thoughtworks.com)\n\n
+''')
 st.divider()
 
 # Setting up the chatbot area

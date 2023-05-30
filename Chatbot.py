@@ -1,5 +1,3 @@
-import os
-
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
@@ -18,8 +16,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Creating the webpage
+
 st.set_page_config(page_title='Thoughtworks Academies - Finn the Finance Robot!', layout='wide')
-st.markdown('''<img src='data:image/png;base64,{}' width=80% height=120>'''.format(img_to_bytes("assets/consulting_banner.png")), unsafe_allow_html=True)
+st.markdown('''<img src='data:image/png;base64,{}' width=100% height=170>'''.format(img_to_bytes("assets/consulting_banner.png")), unsafe_allow_html=True)
 st.title('Welcome to Finn! Your personal Finance Bot!')
 
 st.write('''Hi! I am Finn. I am an AI-powered chatbot.\nI have available to me the Thoughtworks annual reports of the financial years of 2021 and 2022. You can ask me questions in English and other languages about the financial information that we reported during these financial years. 

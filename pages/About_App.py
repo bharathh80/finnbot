@@ -5,7 +5,14 @@ st.set_page_config(
     page_title="About this app",
     layout='wide'
 )
-st.markdown('''<img src='data:image/png;base64,{}' width=100% height=170>'''.format(img_to_bytes("assets/consulting_banner.png")), unsafe_allow_html=True)
+st.markdown('''<img src='data:image/png;base64,{}' width=100% height=140>'''.format(img_to_bytes("assets/consulting_banner.png")), unsafe_allow_html=True)
+
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 st.title("About Finnbot")
 st.write("""

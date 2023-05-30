@@ -31,6 +31,8 @@ You can ask it questions based on anything which is in the annual report, and an
 - who were the directors in 2022?\n
 - what was Thoughtworks’ retained earnings in 2021, and how does this compare to the market?\n
 
+Try asking it to “...explain as if I was a 10 year old”
+
 **What will the chatbot definitely not know?**\n
 This chatbot will definitely not know anything about anything that happened in the wider world after September 2021, because that is where the date of which was used to train it cuts off. From the point of view of Thoughtworks’  specific  financial data, it has indexed our public financial year 2021 and financial year 2022 annual report data. 
 

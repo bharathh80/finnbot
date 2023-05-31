@@ -15,10 +15,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-
-
 # Creating the webpage
-
 st.set_page_config(page_title='Thoughtworks Academies - Finn the Finance Robot!', layout='wide')
 hide_menu_style = """
         <style>
@@ -50,8 +47,10 @@ if 'buffer_memory' not in st.session_state:
     st.session_state.buffer_memory = ConversationBufferWindowMemory(k=3, return_messages=True)
 
 system_msg_template = SystemMessagePromptTemplate.from_template(
-    template="""Answer the question as truthfully as possible using the provided context, 
-and if the answer is not contained within the context provided, say 'I don't know'""")
+    template="""Play the role of a financial advisor and expert accountant. 
+    Answer the question as truthfully as possible using the provided context, 
+and if the answer is not contained within the context provided, say 'I don't know'.
+Always provide the response in markdown text format""")
 
 human_msg_template = HumanMessagePromptTemplate.from_template(template="{input}")
 
@@ -76,6 +75,7 @@ with text_container:
             response = conversation.predict(input=f"Context:\n {context} \n\n Query:\n{query}")
         st.session_state.requests.append(query)
         st.session_state.responses.append(response)
+
 with response_container:
     if st.session_state['responses']:
 

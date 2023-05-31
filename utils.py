@@ -39,8 +39,8 @@ def find_match(_input):
 def query_refiner(conversation, query):
     try:
         response = openai.Completion.create(
-            model="text-davinci-003",
-            prompt=f"Given the following user query and conversation log, formulate a question that would be the most relevant to provide the user with an answer from a knowledge base.\n\nCONVERSATION LOG: \n{conversation}\n\nQuery: {query}\n\nRefined Query:",
+            model=os.getenv('OPENAI_MODEL'),
+            prompt=f"Given the following user query and conversation log, formulate a question that would be the most relevant to provide the user with an answer from a knowledge base.\n\nCONVERSATION LOG: \n{conversation}\n\nQuery: {query}\n\n",
             temperature=0,
             max_tokens=1024,
             top_p=1,
@@ -50,7 +50,7 @@ def query_refiner(conversation, query):
 
         return response['choices'][0]['text']
     except:
-        return "OpenAI issue found - probable cause is key index or rate limit error"
+        return "OpenAI issue found - probable cause is Pinecone index unavailability or rate limit error. Please retry in a few minutes..."
 
 
 # Constructing the history for the chat

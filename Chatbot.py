@@ -26,7 +26,7 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 st.markdown('''<img src='data:image/png;base64,{}' width=100% height=140>'''.format(img_to_bytes("assets/consulting_banner.png")), unsafe_allow_html=True)
 st.title('Welcome to Finn! Your personal Finance Bot!')
 
-st.write('''Hi! I am Finn. I am an AI-powered chatbot.\nI have available to me the Thoughtworks annual reports of the financial years of 2021 and 2022. I speak multiple languages so feel free to ask me questions in your language! 
+st.write('''Hi! I am Finn. I am an AI-powered chatbot.\nI have available to me the Thoughtworks annual reports of the financial years of 2020 and 2021. I speak multiple languages so feel free to ask me questions in your language! 
 I'm here as a small-scale experiment for us to try out.\n
 Obviously nothing that I say could be taken as financial advice, and like all chatbots, I will generally tell you if I don't have the answer …  but I can sometimes produce information that's just plain wrong. 
 \nBut hey, pull up a stool and ask me some questions!\n\n

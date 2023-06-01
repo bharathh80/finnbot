@@ -27,9 +27,17 @@ You can ask it questions based on anything which is in the annual report, and an
 
 
 **Example Questions:**
-- how did Thoughtworks’ earnings before tax change between 2021 and 2022?\n
-- who were the directors in 2022?\n
-- what was Thoughtworks’ retained earnings in 2021, and how does this compare to the market?\n
+***About the company and its finances***
+- Compare and contrast the results of Thoughtworks in 2020 and 2021
+- What was the
+- How did Thoughtworks perform during Covid
+- What are some key highlights of the annual reports?
+- How does the revenue of Thoughtworks compare to a typical IT services company
+- What are the services offered by Thoughtworks
+***About Finance and Strategy***
+- Apply the Porters 5 forces model on Thoughtworks business model
+- Tell me about EBITDA and how it helps indicate financial health of a company
+- What financial indicators would indicate leakages in financial conditions for the company?
 
 Try asking it to “...explain as if I was a 10 year old”
 

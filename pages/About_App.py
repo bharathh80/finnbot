@@ -26,19 +26,19 @@ The answers from this chatbot cannot be absolutely relied upon. Something few of
 You can ask it questions based on anything which is in the annual report, and anything the chatbot like gpt-3 might know about the wider internet. You can try asking it comparison questions, comparing financial results within the thought works financial reporting to the wider market. 
 
 
-**Example Questions:**
-***About the company and its finances***
+**Example Questions:**\n
+***About the company and its finances***\n
 - Compare and contrast the results of Thoughtworks in 2020 and 2021
-- What was the
 - How did Thoughtworks perform during Covid
 - What are some key highlights of the annual reports?
 - How does the revenue of Thoughtworks compare to a typical IT services company
 - What are the services offered by Thoughtworks
-***About Finance and Strategy***
+
+***About Finance and Strategy***\n
 - Apply the Porters 5 forces model on Thoughtworks business model
 - Tell me about EBITDA and how it helps indicate financial health of a company
 - What financial indicators would indicate leakages in financial conditions for the company?
-
+\n\n
 Try asking it to “...explain as if I was a 10 year old”
 
 **What will the chatbot definitely not know?**\n
